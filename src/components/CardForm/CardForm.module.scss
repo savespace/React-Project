@@ -1,0 +1,37 @@
+@import '../../styles/settings.scss';
+
+.cardForm {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+
+  input {
+    width: 120px;
+    height: 35px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    letter-spacing: 0.5px;
+    font-size: 14px;
+  }
+
+  button {
+    height: 35px;
+    padding: 0 15px;
+    cursor: pointer;
+  }
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: center;
+
+    input {
+      width: 80%;
+    }
+
+    button {
+      width: 80%;
+    }
+  }
+}

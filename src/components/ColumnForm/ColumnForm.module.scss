@@ -1,0 +1,52 @@
+.columnForm {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  flex-wrap: wrap;
+  padding: 10px;
+  gap: 10px;
+
+  label {
+    display: flex;
+    align-items: center;
+
+    .labelText {
+      margin-right: 5px;
+      font-weight: bold;
+      font-size: 14px;
+      letter-spacing: 0.5px;
+      white-space: nowrap;
+    }
+
+    input {
+      height: 35px;
+      padding: 0 10px;
+      width: 120px;
+      box-sizing: border-box;
+    }
+  }
+
+  button {
+    height: 35px;  
+    padding: 0 15px;
+    cursor: pointer;
+  }
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: center;
+
+    label {
+      width: 80%;
+      justify-content: flex-start;
+
+      input {
+        width: 100%;
+      }
+    }
+
+    button {
+      width: 80%;
+    }
+  }
+}
