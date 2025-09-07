@@ -1,0 +1,42 @@
+@import '../../styles/settings.scss';
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: darken($color-dark, 3%);
+  color: $color-light;
+  z-index: 1000;
+}
+
+.navbarInner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  min-height: 80px;
+}
+
+.logo {
+  font-size: 24px;
+  color: $color-light;
+  text-decoration: none;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  a {
+    color: $color-light;
+    text-decoration: none;
+
+    &.active {
+      font-weight: bold;
+    }
+  }
+}
