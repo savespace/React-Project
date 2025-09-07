@@ -13,17 +13,14 @@ const reducer = (state = initialState, action) => {
     case ADD_COLUMN:
       return {
         ...state,
-        columns: [
-          ...state.columns,
-          { id: shortid(), title: action.payload.title, icon: action.payload.icon },
-        ],
+        columns: [...state.columns, { ...action.payload, id: shortid() }],
       };
     case ADD_CARD:
       return {
         ...state,
         cards: [
           ...state.cards,
-          { id: shortid(), columnId: action.payload.columnId, title: action.payload.title },
+          { ...action.payload, id: shortid() },
         ],
       };
     default:
