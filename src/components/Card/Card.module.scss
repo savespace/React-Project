@@ -9,5 +9,20 @@
   border-radius: $radius;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-weight: bold;
+  color: #000;
+}
+
+.favoriteButton {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 18px;
+  color: lighten($color-dark, 50%);
+  transition: color 0.2s;
+
+  &.active {
+    color: #f1c40f;
+  }
 }

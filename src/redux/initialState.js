@@ -11,10 +11,10 @@ const initialState = {
     { id: '4', listId: '2', title: 'Songs', icon: 'music' }
   ],
   cards: [
-    { id: '1', columnId: '1', title: 'Harry Potter' },
-    { id: '2', columnId: '2', title: 'Inception' },
-    { id: '3', columnId: '3', title: 'The Witcher 3' },
-    { id: '4', columnId: '4', title: 'Bohemian Rhapsody' }
+    { id: '1', columnId: '1', title: 'Harry Potter', isFavorite: false },
+    { id: '2', columnId: '2', title: 'Inception', isFavorite: false },
+    { id: '3', columnId: '3', title: 'The Witcher 3', isFavorite: false },
+    { id: '4', columnId: '4', title: 'Bohemian Rhapsody', isFavorite: false }
   ]
 };
 
