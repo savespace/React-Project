@@ -1,19 +1,19 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addColumn } from '../../redux/store';
-import styles from './ColumnForm.module.scss';
+import { addList } from '../../redux/store';
+import styles from './ListForm.module.scss';
 
-const ColumnForm = ({ listId }) => {
+const ListForm = () => {
   const [title, setTitle] = useState('');
-  const [icon, setIcon] = useState('');
+  const [description, setDescription] = useState('');
   const dispatch = useDispatch();
 
   const handleSubmit = e => {
     e.preventDefault();
-    if (title && icon) {
-      dispatch(addColumn({ title, icon, listId }));
+    if (title && description) {
+      dispatch(addList({ title, description }));
       setTitle('');
-      setIcon('');
+      setDescription('');
     }
   };
 
@@ -22,22 +22,22 @@ const ColumnForm = ({ listId }) => {
       <input
         className={styles.input}
         type="text"
-        placeholder="Column title"
+        placeholder="List title"
         value={title}
         onChange={e => setTitle(e.target.value)}
       />
       <input
         className={styles.input}
         type="text"
-        placeholder="Icon (np. book, film)"
-        value={icon}
-        onChange={e => setIcon(e.target.value)}
+        placeholder="Description"
+        value={description}
+        onChange={e => setDescription(e.target.value)}
       />
-      <button className={styles.addCardButton} type="submit">
-        Add column
+      <button className={styles.addListButton} type="submit">
+        Add list
       </button>
     </form>
   );
 };
 
-export default ColumnForm;
+export default ListForm;

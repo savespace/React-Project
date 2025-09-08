@@ -34,9 +34,12 @@
   a {
     color: $color-light;
     text-decoration: none;
-
-    &.active {
-      font-weight: bold;
-    }
+    font-weight: normal;
+    transition: color 0.3s ease;
   }
+}
+
+.linkActive {
+  color: $color-warning !important;
+  font-weight: bold;
 }
