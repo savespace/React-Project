@@ -2,9 +2,9 @@
 
 .columns {
   display: flex;
-  justify-content: center; 
-  flex-wrap: wrap;
-  gap: $base-size;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
 .column {
@@ -31,3 +31,11 @@
 .cards {
   padding: $base-size / 2 0;
 }
+
+.heading {
+  text-align: center;
+  font-size: $base-size * 3;
+  font-weight: bold;
+  margin-bottom: $base-size;
+}
+

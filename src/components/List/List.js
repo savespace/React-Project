@@ -3,7 +3,9 @@ import { useParams } from 'react-router';
 import styles from './List.module.scss';
 import Column from './../Column/Column';
 import ColumnForm from './../ColumnForm/ColumnForm';
-import { getListById, getColumnsByList } from '../../redux/store';
+import { getListById } from '../../redux/listsRedux';
+import { getColumnsByList } from '../../redux/columnsRedux';
+
 
 const List = () => {
   const { listId } = useParams();
